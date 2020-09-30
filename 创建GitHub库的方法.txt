@@ -1,0 +1,58 @@
+
+
+
+将 GitHub 中的库克隆到本地，方便进行操作
+1. 	在 GitHub 的个人主页，点击进入 Repositories(仓库)，再点击右上角的 "New" 按钮，创建新的库名及其描述；
+2. 	进入 Git Bash 界面，通过命令行进入想要克隆的本地文件夹地址(区分大小写)，
+	输入命令
+	
+	
+		git clone https://github.com/wyt1900/Natural_Language_Processing.git	 网址为 GitHub 中库的网址
+		
+		
+	显示以下内容，说明克隆本地成功：
+	
+		$ git clone https://github.com/wyt1900/Natural_Language_Processing.git
+		Cloning into 'Natural_Language_Processing'...
+		remote: Enumerating objects: 3, done.
+		remote: Counting objects: 100% (3/3), done.
+		remote: Compressing objects: 100% (2/2), done.
+		remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+		Unpacking objects: 100% (3/3), 644 bytes | 4.00 KiB/s, done.
+
+	
+	
+	
+将本地的项目提交到 GitHub 中的相关库中
+3. 	在本地电脑中，找到克隆到的本地文件夹地址，创建需要的文件并保存；
+4.	在 Git Bash 界面，通过命令行 
+
+
+		git add ""				(引号内是文件名)	
+		git commit -m ""		(引号内是文件描述，这个语句的意思是给你刚刚上传的文件一个备注，方便查找记忆而已)
+		git push origin master	(该命令会弹出一个登录界面，在这里登陆 GitHub 账号之后点击login)
+		
+		
+	出现以下内容，表明上传成功:
+		
+		
+		Administrator@MicroWin10-1208 MINGW64 /D/GitHub-code/Natural_Language_Processing (master)
+		$ git add test.txt
+
+		Administrator@MicroWin10-1208 MINGW64 /D/GitHub-code/Natural_Language_Processing (master)
+		$ git commit -m "test"
+		[master c3c0be2] test
+		 1 file changed, 0 insertions(+), 0 deletions(-)
+		 create mode 100644 test.txt
+
+		Administrator@MicroWin10-1208 MINGW64 /D/GitHub-code/Natural_Language_Processing (master)
+		$ git push origin master
+		Enumerating objects: 4, done.
+		Counting objects: 100% (4/4), done.
+		Delta compression using up to 4 threads
+		Compressing objects: 100% (2/2), done.
+		Writing objects: 100% (3/3), 263 bytes | 263.00 KiB/s, done.
+		Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+		To https://github.com/wyt1900/Natural_Language_Processing.git
+		   4d460f1..c3c0be2  master -> master
+
